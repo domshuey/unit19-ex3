@@ -7,12 +7,10 @@
 
 <h2>Your answers:</h2>
 
-{% for question,idx in questions.questions %}
-    <ul>
-        <li>{{question}}</li>
-        <li>{{responses[idx]}}</li>
-    </ul>
+{% for answer in responses %}
+        <p>{{answer}}</p>
 {% endfor %}
+
 
 
 

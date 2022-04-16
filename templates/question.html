@@ -4,6 +4,14 @@
 
 {% block content%}
 
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
 <form action="/answer" method="post">
     <h1>{{question.question}}</h1>
     {% for choice in question.choices %}
